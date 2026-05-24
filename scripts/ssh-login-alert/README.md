@@ -1,5 +1,34 @@
-## 安装方式
+## 1. 准备工作
 
+### 1. 创建 Telegram Bot
+
+打开 [BotFather](https://t.me/BotFather)，发送：
+
+```text
+/newbot
+```
+
+按提示创建 Bot，并保存 BotFather 返回的 `Bot Token`。
+
+`Bot Token` 格式大概如下：
+
+```text
+1234567890:AAxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+---
+
+### 2. 获取 Chat ID
+打开 [userinfobot](https://t.me/userinfobot)，查看自己的 `Id`。
+
+这个 `Id` 就是安装脚本需要的 `Chat ID`。
+
+格式一般类似：
+
+```text
+123456789
+```
+## 2. 安装方式
 
 ### 方式一：推荐方式，下载后执行
 
