@@ -1,4 +1,4 @@
-## 1. 准备工作
+## 0. 准备工作
 
 ### 1. 创建 Telegram Bot
 
@@ -28,7 +28,7 @@
 ```text
 123456789
 ```
-## 2. 安装方式
+## 1. 安装方式
 
 ### 方式一：推荐方式，下载后执行
 
@@ -62,7 +62,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/lucaxsun/vps-1key-scripts/ma
 
 ---
 
-## 安装过程
+## 2. 安装过程
 
 执行安装脚本后，会要求输入：
 
@@ -78,7 +78,26 @@ Telegram Chat ID
 
 ---
 
-## 卸载方式
+## 3. 测试方法
+
+安装完成后，脚本会先发送一条测试消息。
+
+然后请不要关闭当前 SSH 窗口，重新打开一个新的 SSH 窗口登录 VPS。
+
+如果 Telegram 收到类似下面的通知，说明安装成功：
+
+```text
+🔐 SSH 登录通知
+
+主机: example-host
+公网IP: 1.2.3.4
+IP来源: Manual config
+用户: root
+来源IP: 8.8.8.8
+终端: ssh
+时间: 2026-05-24 16:30:00 CST
+```
+## 4. 卸载方式
 
 ### 普通卸载
 
@@ -133,42 +152,3 @@ bash <(curl -fsSL https://raw.githubusercontent.com/lucaxsun/vps-1key-scripts/ma
 
 ---
 
-## 安装后检查
-
-可以使用下面命令检查是否安装成功：
-
-```bash
-ls -l /usr/local/bin/ssh-login-alert.sh
-grep -n ssh-login-alert.sh /etc/pam.d/sshd
-ls -l /root/.tg-ssh-alert.env
-```
-
-正常情况下应该看到：
-
-```text
-/usr/local/bin/ssh-login-alert.sh 存在且可执行
-/etc/pam.d/sshd 中存在 pam_exec 接入行
-/root/.tg-ssh-alert.env 权限为 600
-```
-
----
-
-## 测试方法
-
-安装完成后，脚本会先发送一条测试消息。
-
-然后请不要关闭当前 SSH 窗口，重新打开一个新的 SSH 窗口登录 VPS。
-
-如果 Telegram 收到类似下面的通知，说明安装成功：
-
-```text
-🔐 SSH 登录通知
-
-主机: example-host
-公网IP: 1.2.3.4
-IP来源: Manual config
-用户: root
-来源IP: 8.8.8.8
-终端: ssh
-时间: 2026-05-24 16:30:00 CST
-```
