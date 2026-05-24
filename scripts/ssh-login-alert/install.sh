@@ -3,8 +3,6 @@ set -euo pipefail
 
 SCRIPT_NAME="ssh-login-alert"
 SCRIPT_VERSION="1.0.0"
-# ==== Change Log ====
-# 1.0.0 Only for Tgbot
 
 # ===== 颜色输出 =====
 if [ -t 1 ]; then
